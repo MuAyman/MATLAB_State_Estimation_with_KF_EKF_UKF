@@ -4,12 +4,12 @@ This repository contains MATLAB implementations of state estimation algorithms (
 
 ## Table of Contents
 - [1. KF_DronePositionTracking.m](#1-kf_dronepositiontrackingm)
-- [3. KF_MassSpringDamper.m](#3-kf_massspringdamperm)
-- [4. KF_DCMotor.m](#4-kf_dcmotorm)
-- [5. EKF_CartPendulum.m](#5-ekf_cartpendulumm)
-- [6. UKF_CartPendulum.m](#6-ukf_cartpendulumm)
-- [7. UKF_2UCubeSat.m](#7-ukf_2ucubesatm)
-- [8. UKF_3DRobotLocalization.m](#8-ukf_3drobotlocalizationm)
+- [2. KF_MassSpringDamper.m](#2-kf_massspringdamperm)
+- [3. KF_DCMotor.m](#3-kf_dcmotorm)
+- [4. EKF_CartPendulum.m](#4-ekf_cartpendulumm)
+- [5. UKF_CartPendulum.m](#5-ukf_cartpendulumm)
+- [6. UKF_2UCubeSat.m](#6-ukf_2ucubesatm)
+- [7. UKF_3DRobotLocalization.m](#7-ukf_3drobotlocalizationm)
 
 ---
 
@@ -22,17 +22,7 @@ This repository contains MATLAB implementations of state estimation algorithms (
 - Demonstrates how the Kalman Filter can estimate the true position from noisy data.
 - Useful for understanding basic KF concepts in a 2D/3D tracking context.
 
-## 2. KF_CartPendulumContinous.m
-**Description:**
-- Applies the Kalman Filter to a linearized cart-pendulum (inverted pendulum) system.
-- **States:** [cart position, cart velocity, pendulum angle, pendulum angular velocity].
-- **Inputs:** Force applied to the cart.
-- **Measurements:** Noisy cart position measurement.
-- Simulates the system with process disturbances and sensor noise.
-- Shows how the filter estimates all system states from noisy measurements.
-- Includes plots comparing true, measured, and estimated states, as well as Kalman gain evolution.
-
-## 3. KF_MassSpringDamper.m
+## 2. KF_MassSpringDamper.m
 **Description:**
 - Demonstrates Kalman Filtering for a mass-spring-damper system.
 - **States:** [position, velocity] of the mass.
@@ -42,7 +32,7 @@ This repository contains MATLAB implementations of state estimation algorithms (
 - The filter estimates position and velocity from noisy position measurements.
 - Includes a custom Kalman filter function and visualizes the improvement over noisy data.
 
-## 4. KF_DCMotor.m
+## 3. KF_DCMotor.m
 **Description:**
 - Implements a Kalman Filter for a DC motor position control system.
 - **States:** [rotor position, angular velocity].
@@ -52,7 +42,7 @@ This repository contains MATLAB implementations of state estimation algorithms (
 - The filter estimates position and velocity from noisy position measurements.
 - Includes RMS error analysis and plots to show the effectiveness of filtering.
 
-## 5. EKF_CartPendulum.m
+## 4. EKF_CartPendulum.m
 **Description:**
 - Implements an Extended Kalman Filter (EKF) for a nonlinear cart-pendulum system.
 - **States:** [cart position, cart velocity, pendulum angle, pendulum angular velocity].
@@ -62,7 +52,7 @@ This repository contains MATLAB implementations of state estimation algorithms (
 - The EKF linearizes the system at each step and estimates all states.
 - Includes detailed plots for all states and estimation error analysis.
 
-## 6. UKF_CartPendulum.m
+## 5. UKF_CartPendulum.m
 **Description:**
 - Applies the Unscented Kalman Filter (UKF) to the nonlinear cart-pendulum system.
 - **States:** [cart position, cart velocity, pendulum angle, pendulum angular velocity].
@@ -72,7 +62,7 @@ This repository contains MATLAB implementations of state estimation algorithms (
 - Simulates process and measurement noise, and compares UKF estimates to true and noisy measurements.
 - Provides error metrics and visualizations for all states.
 
-## 7. UKF_2UCubeSat.m
+## 6. UKF_2UCubeSat.m
 **Description:**
 - Implements a UKF for a 2U CubeSat with multiple subsystems.
 - **States:** [position (3), velocity (3), attitude quaternion (4), angular velocity (3)] — 13 states in total.
@@ -82,7 +72,7 @@ This repository contains MATLAB implementations of state estimation algorithms (
 - The UKF estimates the full 13-dimensional state vector.
 - Includes RMS error analysis and plots for position, velocity, and angular velocity.
 
-## 8. UKF_3DRobotLocalization.m
+## 7. UKF_3DRobotLocalization.m
 **Description:**
 - Demonstrates UKF-based localization for a 3D robot using nonlinear range measurements to fixed beacons.
 - **States:** [x, y, z, vx, vy, vz, roll, pitch, yaw] — position, velocity, and orientation.
